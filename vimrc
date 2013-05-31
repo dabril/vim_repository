@@ -177,6 +177,9 @@ autocmd bufnewfile *.py exe "1,12g/author.*/s//Daniel Abril"
 autocmd bufnewfile *.py exe "1,12g/time.*/s//" .strftime("%c")
 
 " == python compiler pylint
+" sudo apt-get install pylint
+" cd ~/.vim/bundle
+" git clone git://github.com/orenhe/pylint.vim.git
 autocmd filetype python compiler pylint
 let g:pylint_onwrite = 1 " in case that the compiler was executed everytime the file is saved
 						 " otherwise write [vim's command line -> :pylint ]
@@ -184,6 +187,7 @@ let g:pylint_onwrite = 1 " in case that the compiler was executed everytime the 
 " Settings for jedi-vim
 " cd ~/.vim/bundle
 " git clone git://github.com/davidhalter/jedi-vim.git
+" Then, git submodule update --init in your jedi-vim repository.
 let g:jedi#related_names_command = "<leader>z"
 let g:jedi#popup_on_dot = 0
 let g:jedi#popup_select_first = 0
